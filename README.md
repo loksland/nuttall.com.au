@@ -1,5 +1,5 @@
-folio
-=====
+nuttall.com.au
+==============
 
 Source of folio site for Lachlan Nuttall.
 
@@ -13,16 +13,7 @@ Some commented stuff
 {% endcomment %}
 ```
 
-Also all standard html comments will be removed when distributed *except* those wrapped with
-`<!--distcomment:start-->` and `<!--distcomment:end-->`
-ie:
-```
-<!--distcomment:start-->
-<!--
-This comment will be retained into production
--->
-<!--distcomment:end-->
-```
+Also all standard html comments will be removed when distributed.
 
 **Embedding markdown**
 
