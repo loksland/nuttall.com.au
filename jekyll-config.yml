@@ -1,0 +1,13 @@
+# Jekyll config
+# -------------
+exclude: 
+  - _less
+paginate: 5
+# Urls
+permalink: work/:year/:title.html
+# For RSS feed: 
+name: Lachlan Nuttall - Folio
+description: Folio of Lachlan Nuttall
+url: http://nuttall.com.au
+        
+        

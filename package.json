@@ -1,0 +1,36 @@
+{
+  "name": "nuttall.com.au",
+  "version": "0.0.1",
+  "description": "Online folio of Lachlan Nuttall",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loksland/nuttall.com.au.git"
+  },
+  "author": "loksland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loksland/nuttall.com.au/issues"
+  },
+  "homepage": "https://github.com/loksland/nuttall.com.au",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-connect": "^0.8.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-convert": "^0.1.11",
+    "grunt-gh-pages": "^0.9.1",
+    "grunt-hash": "^0.5.0",
+    "grunt-jekyll": "^0.4.2",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-string-replace": "^1.0.0",
+    "http-rewrite-middleware": "^0.1.6"
+  }
+}

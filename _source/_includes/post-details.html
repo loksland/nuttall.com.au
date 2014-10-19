@@ -1,0 +1,98 @@
+
+{% if (include.post.id == page.id) %}
+{% assign standalone = true %}
+{% else %}
+{% assign standalone = false %}
+{% endif %}
+
+<div class="post {% if forloop.last %}last{% endif %}"  >
+
+	<div class="container narrow" >
+		<div class="row">
+			<div class="col-sm-12" >				
+				<h3>{{ include.post.title }}</h3>				
+			</div>
+		</div>
+	</div>
+
+	<div class="media" >
+	<div class="container narrow" >
+		<div class="row text-center">
+			<div class="col-sm-12 no-margin-xs" >			
+			
+{% if include.post.vimeo_id %}			
+				
+				{% if include.post.vimeo_height > 750 %}
+					{% assign limit_height = true %}
+				{% else %}
+					{% assign limit_height = false %}
+				{% endif %}
+				
+				<div class="embed-container {% if limit_height %}limit-height{% endif %}" style="padding-bottom:{{ include.post.vimeo_height | times: 100.3 | divided_by: include.post.vimeo_width }}%" ><iframe src='http://player.vimeo.com/video/{{ include.post.vimeo_id }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>							
+				
+{% endif %}		
+
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="container narrow" >
+
+		<div class="row">
+			<div class="col-sm-6" >
+				<dl>
+{% if include.post.client %}
+					<dt>Client</dt>
+					<dd>{{ include.post.client }}</dd>
+{% endif %}
+{% if include.post.studio %}
+					<dt>Studio</dt>
+					<dd>{{ include.post.studio }}</dd>
+{% endif %}		
+{% if include.post.role %}
+					<dt>Role</dt>
+					<dd>{{ include.post.role }}</dd>
+{% endif %}		
+
+					<dt>Year</dt>
+					<dd>{{ include.post.date | date: "%Y" }}</dd>	
+					
+{% if include.post.site_url %}
+					<dt>Site</dt>
+					<dd><a href="{{ include.post.site_url }}" target="_blank" >
+					{% if include.post.site_label %}
+						{{ include.post.site_label }}
+					{% else %}
+						{{ include.post.site_url }}
+					{% endif %}
+					</a></dd>
+{% endif %}
+					<dt>Categories</dt>
+					<dd>
+					
+					{% for category in include.post.categories %}
+						{{ category }}{% if forloop.last != true %}, {% endif %}
+					{% endfor %}
+					</dd>	
+				</dl>
+
+			</div>
+		
+			<div class="col-sm-6 blurb" >
+			
+{% if standalone %}
+{{ content }}
+{% else %}
+{{ include.post.content }}
+{% endif %}
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+

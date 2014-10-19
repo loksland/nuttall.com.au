@@ -1,0 +1,22 @@
+{
+  "name": "Process",
+  "version": "1.0.0",
+  "authors": [
+    "Lachlan Nuttall <loks@maker.com.au>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "html5-boilerplate": "*",
+    "jquery": "*",
+    "fontawesome": "~4.2.0"
+  }
+}

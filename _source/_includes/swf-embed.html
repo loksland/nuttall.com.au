@@ -1,0 +1,58 @@
+{% comment %}
+	
+Usage:
+{% include swf-embed.html swf_path='/fl/CannonBall-v1.swf' width='441' height='680' version='11.4' alt_img_path='prototype-a.gif' alt_img_preset='post_small' %}
+	
+{% endcomment %}
+
+
+
+
+<div class="text-center img-wrapper" style="margin-bottom:15px;padding:0;" >
+<div id="{{ include.swf_path | replace:'/','_' | replace:'.','_' }}" 
+
+{% if include.alt_img_path %}
+{% comment %}
+<!-- Don't fix div dims if an alt image is present -->
+{% endcomment %}
+{% else %}
+style="width:{{ include.width }}px;height:{{ include.height }}px; border:1px solid white;"
+{% endif %}
+
+>
+
+{% if include.alt_img_path %}
+
+
+
+<img src="/img/{{ include.alt_img_path }}" 
+{% if include.alt_img_preset == "post_med" %} 
+class="post-pic-med"
+{% elsif include.alt_img_preset == "post_small" %}
+class="post-pic-small"
+{% else %}
+class="post-pic-full"
+{% endif %}
+>
+
+{% endif %}
+
+{% if include.alt_text %}
+	<p>
+	{{ include.alt_text }}
+	</p>
+{% endif %}
+
+</div>
+</div>
+
+<script>
+var el = document.getElementById("{{ include.swf_path | replace:'/','_' | replace:'.','_' }}");
+// swfUrlStr, replaceElemIdStr, widthStr, heightStr, swfVersionStr, xiSwfUrlStr, flashvarsObj, parObj, attObj, callbackFn
+swfobject.embedSWF("{{ include.swf_path }}", el, {{ include.width }}, {{ include.height }}, {{ include.version }}, "/fl/vendor/expressInstall.swf");
+</script>
+
+{% comment %}
+{% endcomment %}
+
+
