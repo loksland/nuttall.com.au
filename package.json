@@ -30,6 +30,7 @@
     "grunt-hash": "^0.5.0",
     "grunt-jekyll": "^0.4.2",
     "grunt-jsonlint": "^1.0.4",
+    "grunt-spell": "^0.2.1",
     "grunt-string-replace": "^1.0.0",
     "http-rewrite-middleware": "^0.1.6"
   }

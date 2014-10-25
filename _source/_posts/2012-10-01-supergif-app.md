@@ -11,7 +11,7 @@ vimeo_width: 800
 vimeo_height: 1200
 ---
 
-**Cross platform app for building animated GIFs to enter a nation wide competition**
+**Cross platform app for building animated GIFs to enter a nationwide competition**
 
 Built in Adobe Air and outputted to Android, iOS and the web. Features animated GIF encoding and decoding, responsive UI for a variety of screen size and performance optimised graphics.
 						

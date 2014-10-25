@@ -320,6 +320,7 @@ module.exports = function (grunt) {
 	});
 	
 	// GITHUB PAGES
+	
 	if (grunt.option('msg')){
 		grunt.config.set('gh-pages.options.message', grunt.option('msg'));
 	}
@@ -331,6 +332,19 @@ module.exports = function (grunt) {
 			message: 'Deploy to |gh-pages| branch.'
 		},
 		src: ['**']
+	});
+	
+	// SPELL CHECKING
+	
+	grunt.loadNpmTasks('grunt-spell');
+	grunt.config('spell', {
+		all: {
+      src: ['<%= paths.distPath %>/*.html'],
+      options: {
+        lang: 'en',
+        //ignore: ['cliches', 'double negatives']
+      }
+    }
 	});
 				
   // TASKS

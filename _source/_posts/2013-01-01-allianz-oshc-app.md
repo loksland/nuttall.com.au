@@ -13,7 +13,7 @@ vimeo_height: 1433
 
 **OSHC enables international students to access all their member services from the convenience of their iPhone**
 
-Features core location and mapping services, core data with restful API integration, offline caching and access token authentication
+Features core location and mapping services, core data with restful API integration, offline caching and access token authentication.
 						
 - Average app rating of 4/5 stars
 - Reached #1 in Medical category of the Australian App Store

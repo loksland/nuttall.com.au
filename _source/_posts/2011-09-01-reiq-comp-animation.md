@@ -13,5 +13,5 @@ vimeo_height: 438
 
 **Online advertisement for a competition promoting reiq.com**
 
-Programmed in Flash with traditional keyframes and custom animation scripting. Optimzised in Adobe After Effects.
+Programmed in Flash with traditional key frames and custom animation scripts. Optimised in Adobe After Effects.
 						

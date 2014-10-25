@@ -15,7 +15,7 @@ feature: true
 
 **Greenpeace's flagship online campaign for the Copenhagen Climate Change Summit**
 
-Created back in 2009 when Flash was still fab. Features 3d animation, image manipulation, and deep database and social media integration.
+Created back in 2009 when Flash was still fab. Features 3d animation, image manipulation and deep database and social media integration.
 						
 - Over 40,000 packages sent
 - Official Nominee at the 2010 Webby Awards

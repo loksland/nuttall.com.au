@@ -3,6 +3,7 @@ logs
 *.log
 .DS_Store
 _dev
+_dist
 _site
 _output
 .hash.json
