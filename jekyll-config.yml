@@ -1,13 +1,74 @@
 # Jekyll config
 # -------------
+excerpt_separator: "" # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
 exclude: 
   - _less
-paginate: 5
+paginate: 999
 # Urls
 permalink: work/:year/:title.html
 # For RSS feed: 
 name: Lachlan Nuttall - Folio
 description: Folio of Lachlan Nuttall
 url: http://nuttall.com.au
-        
+# Jekyll image tag
+image:
+  source: img/hires
+  output: img-resized  
+  presets:
+    users:
+      attr:
+        class: user-portrait
+        itemprop: image
+      width: 350
+    half:
+      width: 400
+      height: 400
+# Jekyll picture tag
+picture:
+  source: img/hires
+  output: img-resized
+  markup: "picture"
+  presets:
+    # Default - for 8 col 
+    default:
+      ppi: [1, 2]
+      attr:
+        class: "post-pic"
+      source_lrg:
+        media: "(min-width: 1200px)"
+        width: 700
+      source_med:
+        media: "(min-width: 640px)"
+        width: 620
+      source_default:
+        width: 350
+    # Post - 100% width
+    post_full:
+      ppi: [1,2]
+      attr:
+        class: "post-pic-full"
+      source_lrg:
+        media: "(min-width: 480px)"
+        width: 768
+      source_default:
+        width: 450
+    # Post - 100% up to 480px then no more than 480px-2x15px
+    post_med:
+      ppi: [1, 2]
+      attr:
+        class: "post-pic-med"
+      source_default:
+        width: 450
+    # Post - Locked to 320px-2x15px padding
+    post_small:
+      ppi: [1, 2]
+      attr:
+        class: "post-pic-small"    
+      source_default:
+        width: 290
+# For ref:        
+# @screen-xs: 480px;
+# @screen-sm: 768px;
+# @screen-md: 992px;
+# @screen-lg: 1200px;        
         

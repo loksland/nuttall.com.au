@@ -178,7 +178,7 @@ module Jekyll
     safe true
     priority :low
 
-    CATEGORY_DIR = 'cats'
+    CATEGORY_DIR = 'tag'
 
     def generate(site)
       site.write_category_indexes

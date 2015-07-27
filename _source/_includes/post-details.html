@@ -36,6 +36,25 @@
 		</div>
 	</div>
 	</div>
+	
+{% if include.post.img %}	
+
+	<div class="container narrow" >
+		<div class="row post-pic-row" >
+			<div class="col-sm-12 no-margin-xs" >	
+
+<!--<p class="text-center img-wrapper" >-->
+<a href="/{{ site.picture.source }}/{{ include.post.img }}" target="_blank" class="fullscreen" >
+{% picture post_full {{ include.post.img }} alt="x" %}
+</a>
+<!--</p>-->
+
+			</div>
+		</div>
+	</div>
+	
+
+{% endif %}	
 
 	<div class="container narrow" >
 
@@ -68,11 +87,17 @@
 					{% endif %}
 					</a></dd>
 {% endif %}
-					<dt>Categories</dt>
+					<dt>Tagged</dt>
 					<dd>
 					
+					{% assign cat_counter = 0 %}
 					{% for category in include.post.categories %}
-						{{ category }}{% if forloop.last != true %}, {% endif %}
+					
+						{% if category != 'featured' %}
+							{% if cat_counter != 0 %}, {% endif %}<a href="/tag/{{ category }}">{{ category }}</a>
+							{% capture cat_counter %}{{ cat_counter | plus:'1' }}{% endcapture %}
+						{% endif %}
+							
 					{% endfor %}
 					</dd>	
 				</dl>
@@ -81,11 +106,13 @@
 		
 			<div class="col-sm-6 blurb" >
 			
-{% if standalone %}
-{{ content }}
-{% else %}
-{{ include.post.content }}
-{% endif %}
+			{% if standalone %}
+			{{ content }}
+			{% else %}
+			
+			{{ post.content | markdownify }}
+			
+			{% endif %}
 
 			</div>
 
