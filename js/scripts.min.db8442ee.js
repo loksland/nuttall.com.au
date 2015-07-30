@@ -1,1 +1,0 @@
-function olaAmigos(a){a="{"+a}

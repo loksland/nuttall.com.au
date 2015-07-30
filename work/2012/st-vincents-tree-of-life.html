@@ -19,9 +19,20 @@
 		
 		
 		
-		<link rel="stylesheet" href="/css/theme.min.24828056.css">
+		<link rel="stylesheet" href="/css/theme.min.2eda2bb1.css">
 		
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600|Josefin+Slab:300,600' rel='stylesheet' type='text/css'>
+		
+		
+		
+		
+		<link rel="stylesheet" href="/ps/photoswipe.css"> 
+		
+		<link rel="stylesheet" href="/ps/default-skin/default-skin.css"> 
+		
+		<script src="/ps/photoswipe.min.js"></script> 
+		
+		<script src="/ps/photoswipe-ui-default.min.js"></script> 
 		
 	</head>
 	<body>
@@ -48,14 +59,80 @@
 
 				<div class="navbar-collapse collapse">
 					
-					<ul class="nav navbar-nav">
-					<li class="active" ><a href="/">Folio</a></li>
-					<li class="" ><a href="/contact.html" >Contact</a></li>
+					<ul class="nav navbar-nav"> 
+						<li class="active" ><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><span class="sr-only">home</span></a></li>
+						
+						
+						
+						<li class="dropdown">
+						
+						
+						
+                <a href="/index.html" data-toggle="dropdown" class="dropdown-toggle"><em>filter by</em> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    
+                   		
+											
+											<li class="" ><a href="/tag/games"  >games</a></li>
+											
+										
+                   		
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/interactive"  >interactive</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/animation"  >animation</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/banners"  >banners</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/mobile"  >mobile</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/android"  >android</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/ios"  >ios</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/html5"  >html5</a></li>
+											
+										
+                   		
+											
+											<li class="" ><a href="/tag/desktop"  >desktop</a></li>
+											
+										
+                </ul>
+            </li>
+            
+						
+						
+						
+						
+						
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right icon-nav">
-					<li><a href="http://github.com/loksland" target="_blank" title="github" class="pic" ><i class="fa fa-github-alt"></i></a></li>
-					<li><a href="http://twitter.com/loklandia" target="_blank" title="@loklandia" class="pic" ><i class="fa fa-twitter"></i></a></li>
+						<li class="" ><a href="/contact.html" >contact</a></li>
+						<li><a href="http://github.com/loksland" target="_blank" title="github" class="pic" ><i class="fa fa-github-alt"></i><span class="sr-only">github</span></a></li>
+						<li><a href="http://twitter.com/loklandia" target="_blank" title="@loklandia" class="pic" ><i class="fa fa-twitter"></i><span class="sr-only">twitter</span></a></li>
 					</ul>
 				
 				</div>
@@ -67,9 +144,9 @@
 		<div class="container narrow" >
 		<div class="row" >
 		<div class="col-sm-12" >		
-		<img src="img/lachlan-nuttall.jpg" width="128" height="128" alt="Lachlan Nuttall" >
+		<img src="/img/lachlan-nuttall.jpg" width="128" height="128" alt="Lachlan Nuttall" class="img-rounded" >
 		<p >
-		Hi, my name is <strong>Lachlan Nuttall</strong> and I'm a freelance programmer and animator for mobile and the web. This is my portfolio of selected native apps, games and interactive work I've created and contributed to. 		
+		Hi, my name is <strong>Lachlan Nuttall</strong> and I'm a mobile app developer and animator. This is my folio of selected native apps, games and interactive work I've created and contributed to. 		
 		</p>
 		</div>
 		</div>
@@ -79,11 +156,69 @@
 		 
 		
 		
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+				
+				<div class="pswp__bg"></div>
+
+				
+				<div class="pswp__scroll-wrap">
+
+						
+						<div class="pswp__container">
+								<div class="pswp__item"></div>
+								<div class="pswp__item"></div>
+								<div class="pswp__item"></div>
+						</div>
+
+						
+						<div class="pswp__ui pswp__ui--hidden">
+
+								<div class="pswp__top-bar">
+
+										
+
+										<div class="pswp__counter"></div>
+
+										<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+										
+										
+										
+										
+										<div class="pswp__preloader">
+												<div class="pswp__preloader__icn">
+													<div class="pswp__preloader__cut">
+														<div class="pswp__preloader__donut"></div>
+													</div>
+												</div>
+										</div>
+								</div>
+
+								<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+										<div class="pswp__share-tooltip"></div> 
+								</div>
+
+								<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+								</button>
+
+								<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+								</button>
+
+								<div class="pswp__caption">
+										<div class="pswp__caption__center"></div>
+								</div>
+
+						</div>
+				</div>
+		</div>		
+		
+		
+		
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.ffe47a16.js"><\/script>')</script>
 		<script src="/js/vendor/bootstrap.min.26908395.js" ></script>
-		<script src="/js/scripts.min.db8442ee.js"></script>
+		<script src="/js/scripts.min.398af6c5.js"></script>
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
