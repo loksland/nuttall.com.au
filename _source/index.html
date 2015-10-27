@@ -3,16 +3,26 @@ layout: default
 title: Folio
 ---
 
-{% comment %}<!--
-{% for post in site.posts %}
-    
+{% for post in site.categories['featured'] %}
+
+{% if post.hidden != true and post.list_first_featured %}
+
 {% include post-details.html post=post %}
-    
+
+{% endif %}
+
 {% endfor %}
--->{% endcomment %}
+
+
 
 {% for post in site.categories['featured'] %}
 
+{% if post.hidden != true and post.list_first_featured != true %}
+
 {% include post-details.html post=post %}
 
+{% endif %}
+
 {% endfor %}
+
+

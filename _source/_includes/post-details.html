@@ -28,7 +28,7 @@
 					{% assign limit_height = false %}
 				{% endif %}
 				
-				<div class="embed-container {% if limit_height %}limit-height{% endif %}" style="padding-bottom:{{ include.post.vimeo_height | times: 100.3 | divided_by: include.post.vimeo_width }}%" ><iframe src='http://player.vimeo.com/video/{{ include.post.vimeo_id }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>							
+				<div class="embed-container {% if limit_height %}limit-height{% endif %}" style="padding-bottom:{% if include.post.vimeo_width < 500 %}{{ include.post.vimeo_height }}px{% else %}{{ include.post.vimeo_height | times: 100.3 | divided_by: include.post.vimeo_width }}%{% endif %}" ><iframe src='http://player.vimeo.com/video/{{ include.post.vimeo_id }}' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>							
 				
 {% endif %}		
 
@@ -91,14 +91,7 @@
 					<dd>
 					
 					{% assign cat_counter = 0 %}
-					{% for category in include.post.categories %}
-					
-						{% if category != 'featured' %}
-							{% if cat_counter != 0 %}, {% endif %}<a href="/tag/{{ category }}">{{ category }}</a>
-							{% capture cat_counter %}{{ cat_counter | plus:'1' }}{% endcapture %}
-						{% endif %}
-							
-					{% endfor %}
+					{% for category in include.post.categories %}{% if category != 'featured' %}{% if cat_counter != 0 %}, {% endif %}<a href="/tag/{{ category }}">{{ category }}</a>{% capture cat_counter %}{{ cat_counter | plus:'1' }}{% endcapture %}{% endif %}{% endfor %}
 					</dd>	
 				</dl>
 

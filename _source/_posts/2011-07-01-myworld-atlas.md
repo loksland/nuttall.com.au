@@ -1,14 +1,15 @@
 ---
 layout: post
-title: MyWorld Atlas
-categories: frontend programming web
+title: MyWorld Atlas web app
+categories: interactive featured
 client: Wiley Publishing
 studio: Mettro Digital
-role: Lead Flash developer
+role: Lead interactive developer
 feature: true
 vimeo_id: 109122358
 vimeo_width: 800
 vimeo_height: 440
+list_first_interactive: true
 ---
 
 **An interactive online version of the iconic Jacaranda Atlas used by thousands of school kids around Australia**

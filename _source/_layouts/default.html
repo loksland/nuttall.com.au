@@ -10,9 +10,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
 		{% if page.url == "/index.html" %}
-		<title>Lachlan Nuttall: portfolio</title>
+		<title>Lachlan Nuttall iPhone/iPad developer portfolio</title>
 		{% else %}
-		<title>{{ page.title }} | Lachlan Nuttall: portfolio</title>
+		<title>{{ page.title }} | Lachlan Nuttall iPhone/iPad developer portfolio</title>
 		{% endif %}
 		
 		<meta name="description" content="">
@@ -27,7 +27,7 @@
 		ifdist:end-->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600|Josefin+Slab:300,600' rel='stylesheet' type='text/css'>
 		
-		
+		{% comment %} 
 		<!-- Photoswipe -->
 		<!-- Core CSS file -->
 		<link rel="stylesheet" href="/ps/photoswipe.css"> 
@@ -40,7 +40,7 @@
 		<script src="/ps/photoswipe.min.js"></script> 
 		<!-- UI JS file -->
 		<script src="/ps/photoswipe-ui-default.min.js"></script> 
-		
+		{% endcomment %} 
 	</head>
 	<body>
      
@@ -71,20 +71,49 @@
 					<ul class="nav navbar-nav"> 
 						<li class="{% if !page.id or page.url == "/index.html" %}active{% endif %}" ><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><span class="sr-only">home</span></a></li>
 						
-						
-						
 						<li class="dropdown">
 						
-						
-						
-                <a href="/index.html" data-toggle="dropdown" class="dropdown-toggle">{% if page.category %}{{ page.category }}{% else %}<em>filter by</em>{% endif %} <b class="caret"></b></a>
+                <a href="/index.html" data-toggle="dropdown" class="dropdown-toggle">{% if page.category %}{% if site.catlabels[page.category] %}{{ site.catlabels[page.category] }}{% else %}{{ page.category }}{% endif %}{% else %}<em>filter by</em>{% endif %} <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    {% for category in site.categories order:ascending %}
-                   		{% capture catname %}{{ category | first }}{% endcapture %}
-											{% if catname != 'featured' %}
-											<li class="{% if page.category != "" %}{% if page.category == catname %}active{% endif %}{% endif %}" ><a href="/tag/{{ category | first }}"  >{{ catname }}</a></li>
+                    
+                    {% for category in site.categories reversed %}
+                    
+                   		{% capture catname %}{{ category | first }}{% endcapture %}     
+                   		
+                   		{% if catname != "desktop" %}
+                   		              		
+												{% capture catlabel %}{% if site.catlabels[catname] %}{{ site.catlabels[catname] }}{% else %}{{ catname }}{% endif %}{% endcapture %}
+											
+											
+												{% if site.hiddencats[catname] != true %}
+																			
+													<li class="{% if page.category != "" %}{% if page.category == catname %}active{% endif %}{% endif %}" ><a href="/tag/{{ category | first }}"  >{{ catlabel }}</a></li>
+												
+												
+												{% endif %}
+											
 											{% endif %}
 										{% endfor %}
+										
+                    {% for category in site.categories reversed %}
+                    
+                   		{% capture catname %}{{ category | first }}{% endcapture %}     
+                   		
+                   		{% if catname == "desktop" %}
+                   		              		
+												{% capture catlabel %}{% if site.catlabels[catname] %}{{ site.catlabels[catname] }}{% else %}{{ catname }}{% endif %}{% endcapture %}
+											
+											
+												{% if site.hiddencats[catname] != true %}
+																			
+													<li class="{% if page.category != "" %}{% if page.category == catname %}active{% endif %}{% endif %}" ><a href="/tag/{{ category | first }}"  >{{ catlabel }}</a></li>
+												
+												
+												{% endif %}
+											
+											{% endif %}
+										{% endfor %}						
+										
                 </ul>
             </li>
             
@@ -92,13 +121,11 @@
 						<li class="{% if page.url == "/contact.html" %}active{% endif %}" ><a href="/contact.html" ><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><span class="sr-only">Contact</span></a></li>
 						-->{% endcomment %}
 						
-						
-						
-						
 					</ul>
 					
 					<ul class="nav navbar-nav navbar-right icon-nav">
-						<li class="{% if page.url == "/contact.html" %}active{% endif %}" ><a href="/contact.html" >contact</a></li>
+						<li class="{% if page.url == "/cv.html" %}active{% endif %}" ><a href="/cv" >cv</a></li>
+						<li class="{% if page.url == "/contact.html" %}active{% endif %}" ><a href="/contact" >contact</a></li>
 						<li><a href="http://github.com/loksland" target="_blank" title="github" class="pic" ><i class="fa fa-github-alt"></i><span class="sr-only">github</span></a></li>
 						<li><a href="http://twitter.com/loklandia" target="_blank" title="@loklandia" class="pic" ><i class="fa fa-twitter"></i><span class="sr-only">twitter</span></a></li>
 					</ul>
@@ -108,21 +135,25 @@
 			</div><!--/.container -->
 		</div><!--/.navbar -->
 		
+		
+		{% if page.noblurb != true %}
 		<div class="intro" >
 		<div class="container narrow" >
 		<div class="row" >
 		<div class="col-sm-12" >		
 		<img src="/img/lachlan-nuttall.jpg" width="128" height="128" alt="Lachlan Nuttall" class="img-rounded" >
 		<p >
-		Hi, my name is <strong>Lachlan Nuttall</strong> and I'm a mobile app developer and animator. This is my folio of selected native apps, games and interactive work I've created and contributed to. 		
+		Hello, my name is <strong>Lachlan Nuttall</strong> and I design and develop beautifully engaging experiences for mobile and the web. Here is a selection of apps, games, animations and experiences I've created and contributed to. 	
 		</p>
 		</div>
 		</div>
 		</div>
 		</div>
+		{% endif %}
 		
 		{{ content }} 
 		
+		{% comment %} 
 		<!-- Root element of PhotoSwipe. Must have class pswp. -->
 		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -189,6 +220,7 @@
 						</div>
 				</div>
 		</div>		
+		{% endcomment %} 
 		
 		<!--ifdev:start-->
 		<script src="/js/vendor/jquery.js" ></script>		

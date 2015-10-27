@@ -10,6 +10,19 @@ permalink: work/:year/:title.html
 name: Lachlan Nuttall - Folio
 description: Folio of Lachlan Nuttall
 url: http://nuttall.com.au
+# Cat labels
+catlabels:
+  ios: iOS apps
+  desktop: desktop apps
+# Hide cats
+hiddencats: 
+  mobile: true
+  featured: true
+  banners: true
+  android: true
+# Sort cats
+prioritycats:
+  ios: true
 # Jekyll image tag
 image:
   source: img/hires

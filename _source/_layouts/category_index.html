@@ -2,8 +2,29 @@
 layout: default
 ---
 
+
 {% for post in site.categories[page.category] %}
 
+{% capture list_first %}list_first_{{ page.category }}{% endcapture %}
+
+{% if post.hidden != true and post[list_first] %}
+
 {% include post-details.html post=post %}
+
+{% endif %}
+
+{% endfor %}
+
+
+
+{% for post in site.categories[page.category] %}
+
+{% capture list_first %}list_first_{{ page.category }}{% endcapture %}
+
+{% if post.hidden != true and post[list_first] != true %}
+
+{% include post-details.html post=post %}
+
+{% endif %}
 
 {% endfor %}

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Sun Effects Booth
-categories: mobile programming native-ios
+title: Sun Effects Booth iPhone app
+categories: mobile ios featured
 client: Qld Government
 studio: Mettro Digital
 role: Lead iOS developer
@@ -9,6 +9,7 @@ feature: true
 vimeo_id: 109353060
 vimeo_width: 800
 vimeo_height: 1208
+list_first_featured: true
 ---
 
 **A highly publicised iPhone photo booth app that simulates the potential effects of sun exposure to your skin**

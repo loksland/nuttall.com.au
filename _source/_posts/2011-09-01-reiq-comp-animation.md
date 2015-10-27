@@ -9,17 +9,10 @@ feature: true
 vimeo_id: 109127098
 vimeo_width: 800
 vimeo_height: 438
-# img: x.jpg
+list_first_animation: true
 ---
-
-
 
 **Online advertisement for a competition promoting reiq.com**
 
 Programmed in Flash with traditional key frames and custom animation scripts. Optimised in Adobe After Effects.
 
-
-
-
-
- 

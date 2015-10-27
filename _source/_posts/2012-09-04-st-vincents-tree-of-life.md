@@ -1,7 +1,7 @@
 ---
 layout: post
 title: St Vincent's Tree of Life
-categories: fontend animation programming web
+categories: interactive animation
 client: St Vincent's Hospital, Sydney
 studio: Mettro Digital
 role: Lead Flash developer and animator

@@ -1,14 +1,15 @@
 ---
 layout: post
 title: SuperGIF
-categories: mobile programming
+categories: mobile interactive android ios
 client: Intrust Super
 studio: Mettro Digital
-role: Lead Air developer
+role: Lead developer
 feature: true
 vimeo_id: 109346712
 vimeo_width: 800
 vimeo_height: 1200
+hidden: true
 ---
 
 **Cross platform app for building animated GIFs to enter a nationwide competition**
